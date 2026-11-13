@@ -1,0 +1,18 @@
+{
+  "name": "titip-salam",
+  "version": "1.0.0",
+  "description": "Web confess anonim: mode Personal (link rahasia) dan mode Umum (feed publik). Vercel + Supabase.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:init": "node scripts/db-init.js"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "postgres": "^3.4.9"
+  }
+}

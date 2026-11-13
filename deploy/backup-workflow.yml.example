@@ -1,0 +1,31 @@
+# Backup harian database Supabase memakai GitHub Actions (untuk paket gratis Supabase).
+# Cara pakai: salin ke .github/workflows/backup.yml di repo PRIVAT kamu.
+# Tambahkan secret repo: SUPABASE_DB_URL (connection string, boleh Session pooler port 5432
+# atau Direct) dan BACKUP_PASSPHRASE (kata sandi panjang untuk mengenkripsi berkas).
+# PENTING: backup berisi semua pesan termasuk Personal. Repo harus privat dan berkas dienkripsi.
+name: backup-db
+on:
+  schedule:
+    - cron: "30 20 * * *"   # 20:30 UTC = 03:30 WIB
+  workflow_dispatch: {}
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pasang pg_dump 17
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client-17 || sudo apt-get install -y postgresql-client
+      - name: Dump + enkripsi
+        env:
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+          PASS: ${{ secrets.BACKUP_PASSPHRASE }}
+        run: |
+          pg_dump "$DB_URL" --no-owner --no-privileges --schema=public -Fc -f backup.dump
+          gpg --batch --yes --pass "$PASS" --symmetric --cipher-algo AES256 -o backup-$(date -u +%F).dump.gpg backup.dump
+          rm backup.dump
+      - uses: actions/upload-artifact@v4
+        with:
+          name: titip-salam-backup
+          path: backup-*.dump.gpg
+          retention-days: 7

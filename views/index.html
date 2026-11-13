@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-cms="meta.title">Titip Salam — Web Confess Anonim Indonesia</title>
+<meta name="description" content="Tulis perasaanmu tanpa daftar. Kirim lewat link rahasia untuk satu orang (mode Personal) atau terbitkan di feed umum (mode Umum)." data-cms="meta.description">
+<meta name="theme-color" content="#2F4156">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232F4156'/%3E%3Cpath d='M12 18.5s-5.5-3.4-5.5-7.6A3.1 3.1 0 0112 9a3.1 3.1 0 015.5 1.9c0 4.2-5.5 7.6-5.5 7.6z' fill='%23C8D9E6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Sprite ikon -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-8-4.9-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6.1-8 11-8 11z"/></symbol>
+  <symbol id="lock" viewBox="0 0 24 24"><rect x="4" y="10.5" width="16" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 018 0v2.5"/></symbol>
+  <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9S14.6 18.4 12 21c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4.5 4.5 0 006.4 0l3-3a4.5 4.5 0 00-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1-1"/></symbol>
+  <symbol id="user-off" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.2-3.6 4.2-5.5 8-5.5s6.8 1.9 8 5.5"/><path d="M4 4l16 16"/></symbol>
+  <symbol id="flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4L17 12H5"/></symbol>
+  <symbol id="eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><svg class="h" aria-hidden="true"><use href="#heart"/></svg></span>
+      <span class="brand-name">Titip Salam</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#mode">Mode Confess</a>
+      <a href="#cara">Cara Kerja</a>
+      <a href="#feed">Feed Umum</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#tulis">Tulis Confess</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <svg class="deco d1 h" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+  <svg class="deco d2 h" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+  <svg class="deco d3 teal h" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+  <svg class="deco d4 h" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+  <svg class="deco d5 out" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+  <svg class="deco d6 out" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="rule"><span class="eyebrow" data-cms="hero.eyebrow">Web Confess Indonesia</span></div>
+      <h1 class="display"><span data-cms="hero.title1">Bilang yang selama ini</span> <em data-cms="hero.title2">cuma kamu simpan.</em><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg></h1>
+      <p class="hero-lead" data-cms="hero.lead">Tulis perasaanmu tanpa perlu daftar. Kirim diam-diam lewat link rahasia yang hanya bisa dibuka satu orang, atau terbitkan di feed umum supaya dia menemukannya sendiri.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#tulis" data-cms="hero.cta1">Tulis Confess Sekarang</a>
+        <a class="btn btn-ghost" href="#feed" data-cms="hero.cta2">Lihat Feed</a>
+      </div>
+      <ul class="ticks">
+        <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="hero.tick1">Tanpa daftar</span></li>
+        <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="hero.tick2">Tanpa email</span></li>
+        <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="hero.tick3">Identitas tersembunyi</span></li>
+      </ul>
+    </div>
+
+    <div class="form-wrap" id="tulis">
+      <div class="card">
+        <span class="sticker" aria-hidden="true"><svg class="h" viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+
+        <form id="confess-form" novalidate>
+          <div class="form-inner" id="form-inner">
+            <div>
+              <h2 data-cms="form.title">Tulis confess-mu</h2>
+              <p class="sub" data-cms="form.sub">Pilih dulu, mau dibaca siapa.</p>
+            </div>
+
+            <fieldset class="seg">
+              <legend class="sr-only">Mode confess</legend>
+              <label><input type="radio" name="mode" value="personal" checked><span><svg class="i" aria-hidden="true"><use href="#lock"/></svg>Personal</span></label>
+              <label><input type="radio" name="mode" value="public"><span><svg class="i" aria-hidden="true"><use href="#globe"/></svg>Umum</span></label>
+            </fieldset>
+
+            <div class="note" id="note-personal">
+              <svg class="i" aria-hidden="true"><use href="#lock"/></svg>
+              <span><b>Mode Personal.</b> Hanya bisa dibuka lewat link rahasia. Tidak tampil di feed dan tidak bisa dicari.</span>
+            </div>
+            <div class="note" id="note-public" hidden>
+              <svg class="i" aria-hidden="true"><use href="#globe"/></svg>
+              <span><b>Mode Umum.</b> Confess terbit di feed publik dan bisa ditemukan lewat pencarian nama.</span>
+            </div>
+
+            <div class="field">
+              <label for="to">Untuk siapa?</label>
+              <input class="input" id="to" name="to" type="text" maxlength="40" placeholder="Nama atau panggilan dia" autocomplete="off" required>
+            </div>
+            <div class="field">
+              <label for="message">Pesanmu <span class="count" id="count" aria-live="off">0/1000</span></label>
+              <textarea class="input" id="message" name="message" rows="4" maxlength="1000" placeholder="Tulis apa adanya. Jujur, tapi tetap sopan." required></textarea>
+            </div>
+            <div class="field">
+              <label for="from">Dari (opsional)</label>
+              <input class="input" id="from" name="from" type="text" maxlength="40" placeholder="Kosongkan untuk anonim" autocomplete="off">
+            </div>
+
+            <div class="field" id="expiry-field">
+              <label for="expiry">Masa berlaku link</label>
+              <select class="input" id="expiry" name="expiry">
+                <option value="0" selected>Tanpa batas waktu</option>
+                <option value="7">7 hari</option>
+                <option value="30">30 hari</option>
+                <option value="90">90 hari</option>
+              </select>
+              <small class="field-hint">Setelah masa berlaku habis, link tidak bisa dibuka lagi dan pesannya dihapus.</small>
+            </div>
+
+            <div class="ts-box" id="ts-box" hidden></div>
+
+            <div class="hp" aria-hidden="true">
+              <label>Jangan diisi <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+            <button class="btn btn-primary submit" type="submit" id="submit">Buat Link Rahasia</button>
+            <p class="legal-note">Dengan mengirim, kamu menyetujui <a href="/disclaimer">Disclaimer</a> dan <a href="/privasi">Kebijakan Privasi</a>.</p>
+          </div>
+        </form>
+
+        <div class="done" id="done" hidden>
+          <span class="badge" aria-hidden="true"><svg class="h" viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+          <h2 id="done-title"></h2>
+          <p id="done-text"></p>
+          <div class="linkbox" id="linkbox" hidden>
+            <label class="sr-only" for="secret-link">Link rahasia</label>
+            <input id="secret-link" type="text" readonly>
+            <button class="btn btn-primary" type="button" id="copy">Salin</button>
+          </div>
+          <div class="delbox" id="delbox" hidden>
+            <p><b>Kode hapus.</b> Simpan kode ini kalau suatu saat kamu ingin menghapus pesanmu sendiri. Kode tidak bisa ditampilkan lagi.</p>
+            <div class="linkbox">
+              <label class="sr-only" for="delete-code">Kode hapus</label>
+              <input id="delete-code" type="text" readonly>
+              <button class="btn btn-sky" type="button" id="copy-del">Salin</button>
+            </div>
+            <p class="small"><a href="/hapus">Hapus pesan Umum-ku</a></p>
+          </div>
+          <div class="row">
+            <a class="btn btn-ghost" id="done-open" href="#feed">Lihat di Feed</a>
+            <button class="btn btn-sky" type="button" id="again">Tulis lagi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODE -->
+<section class="modes" id="mode">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow"><svg class="h" aria-hidden="true"><use href="#heart"/></svg>Dua Mode Confess</span>
+      <h2 class="display" data-cms="modes.title">Dua cara menyampaikan rasa</h2>
+      <p data-cms="modes.lead">Sama-sama anonim. Bedanya hanya satu: siapa yang boleh membacanya.</p>
+    </div>
+    <div class="mode-grid">
+      <article class="mode dark">
+        <svg class="bg-heart h" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+        <div class="tag"><span class="ico"><svg class="i" aria-hidden="true"><use href="#lock"/></svg></span>Mode Personal</div>
+        <h3 data-cms="mp.title">Link rahasia, hanya untuk satu orang</h3>
+        <ul>
+          <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="mp.b1">Hanya bisa dibaca oleh pemilik link</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="mp.b2">Tidak muncul di feed maupun pencarian</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="mp.b3">Kamu yang memutuskan kapan link dibagikan</span></li>
+        </ul>
+        <div class="demo"><svg class="i" aria-hidden="true"><use href="#link"/></svg><span id="demo-link">titipsalam.id/r/x7K2…m9Qa</span></div>
+      </article>
+
+      <article class="mode light">
+        <svg class="bg-heart h" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+        <div class="tag"><span class="ico"><svg class="i" aria-hidden="true"><use href="#globe"/></svg></span>Mode Umum</div>
+        <h3 data-cms="mu.title">Terbit di feed, bisa ditemukan siapa saja</h3>
+        <ul>
+          <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="mu.b1">Tampil di feed publik begitu dikirim</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="mu.b2">Dia bisa menemukannya lewat cari nama</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#check"/></svg><span data-cms="mu.b3">Cocok untuk bilang suka, minta maaf, atau ucapan</span></li>
+        </ul>
+        <div class="demo"><b>Untuk: Dinda</b><span>Makasih sudah selalu ada. Aku cuma mau bilang itu.</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CARA KERJA -->
+<section class="steps-sec" id="cara">
+  <div class="wrap">
+    <span class="eyebrow"><svg class="h" aria-hidden="true"><use href="#heart"/></svg>Cara Kerja</span>
+    <h2 class="display" data-cms="steps.title">Tiga langkah, selesai di browser</h2>
+    <div class="steps">
+      <div class="step"><span class="no" aria-hidden="true">01</span><h3 data-cms="step1.title">Tulis pesanmu</h3><p data-cms="step1.text">Isi nama penerima dan pesan. Nama pengirim boleh dikosongkan.</p></div>
+      <div class="step"><span class="no" aria-hidden="true">02</span><h3 data-cms="step2.title">Pilih modenya</h3><p data-cms="step2.text">Personal untuk satu pembaca lewat link rahasia, atau Umum untuk dipajang di feed.</p></div>
+      <div class="step"><span class="no" aria-hidden="true">03</span><h3 data-cms="step3.title">Kirim dan biarkan sampai</h3><p data-cms="step3.text">Bagikan link rahasia lewat chat, atau tunggu dia menemukan namanya di feed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEED -->
+<section class="feed-sec" id="feed">
+  <div class="wrap">
+    <div class="feed-head">
+      <div class="t">
+        <span class="eyebrow"><svg class="h" aria-hidden="true"><use href="#heart"/></svg>Feed Umum</span>
+        <h2 class="display" data-cms="feed.title">Cari namamu, siapa tahu ada yang menunggu</h2>
+      </div>
+      <form class="search" id="search-form" role="search">
+        <label class="sr-only" for="q">Cari nama</label>
+        <input id="q" type="search" placeholder="Cari nama di feed…" maxlength="40" autocomplete="off">
+        <button class="btn btn-primary" type="submit">Cari</button>
+      </form>
+    </div>
+    <div class="feed" id="feed-list" aria-live="polite"></div>
+    <div class="more"><button class="btn btn-ghost" type="button" id="more" hidden>Muat lebih banyak</button></div>
+  </div>
+</section>
+
+<!-- PRIVASI -->
+<section class="privacy">
+  <div class="wrap">
+    <div class="lead">
+      <span class="eyebrow"><svg class="h" aria-hidden="true"><use href="#heart"/></svg>Privasi</span>
+      <h2 class="display" data-cms="privacy.title">Tenang untuk siapa saja yang menulis</h2>
+      <p data-cms="privacy.lead">Tidak ada akun, tidak ada notifikasi yang mengganggu. Kamu cukup menulis, lalu pergi.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pcard"><svg class="i" aria-hidden="true"><use href="#user-off"/></svg><h3>Tanpa akun</h3><p>Tidak perlu login atau email. Buka, tulis, kirim.</p></div>
+      <div class="pcard"><svg class="i" aria-hidden="true"><use href="#eye-off"/></svg><h3>Identitas tersembunyi</h3><p>Nama pengirim tidak ditampilkan kecuali kamu sendiri yang menulisnya.</p></div>
+      <div class="pcard"><svg class="i" aria-hidden="true"><use href="#lock"/></svg><h3>Link yang unik</h3><p>Mode Personal memakai alamat acak yang sulit ditebak.</p></div>
+      <div class="pcard"><svg class="i" aria-hidden="true"><use href="#heart"/></svg><h3>Tetap sopan</h3><p>Dilarang menyebut data pribadi sensitif milik orang lain. Pesan bermasalah bisa dilaporkan.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="eyebrow"><svg class="h" aria-hidden="true"><use href="#heart"/></svg>FAQ</span>
+    <h2 class="display" data-cms="faq.title">Pertanyaan yang sering muncul</h2>
+    <div class="faq-grid">
+      <div class="qa"><h3 data-cms="faq1.q">Apa bedanya mode Personal dan Umum?</h3><p data-cms="faq1.a">Personal hanya bisa dibuka lewat link rahasia. Umum dipublikasikan di feed dan bisa dicari lewat nama.</p></div>
+      <div class="qa"><h3 data-cms="faq2.q">Apakah pengirim benar-benar anonim?</h3><p data-cms="faq2.a">Ya. Tidak ada login dan identitas pengirim disembunyikan, kecuali kamu mengisi nama sendiri.</p></div>
+      <div class="qa"><h3 data-cms="faq3.q">Siapa yang bisa membuka link Personal?</h3><p data-cms="faq3.a">Siapa pun yang memegang link-nya. Karena itu, bagikan hanya ke orang yang kamu tuju.</p></div>
+      <div class="qa"><h3 data-cms="faq4.q">Cocok untuk siapa saja?</h3><p data-cms="faq4.a">Untuk gebetan, teman, keluarga, mantan, atau dirimu sendiri di masa depan.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- CTA + FOOTER -->
+<footer class="closing">
+  <svg class="deco c1" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+  <svg class="deco c2 h" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+  <svg class="deco c3" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>
+  <div class="wrap">
+    <div class="big">
+      <h2 class="display"><span data-cms="cta.title1">Jangan biarkan rasanya jadi cerita yang</span> <em data-cms="cta.title2">tak pernah sampai.</em></h2>
+      <a class="btn btn-sky" href="#tulis" data-cms="cta.button">Tulis Confess Sekarang</a>
+    </div>
+    <div class="foot">
+      <span class="fb">Titip Salam</span>
+      <nav aria-label="Footer">
+        <a href="/disclaimer">Disclaimer</a>
+        <a href="/privasi">Kebijakan Privasi</a>
+        <a href="/hapus">Hapus Pesan</a>
+        <a href="/disclaimer#kontak">Kontak</a>
+      </nav>
+      <small data-cms="foot.copy">© 2026 Titip Salam. Anonim, gratis, dan dibuat dengan sepenuh hati.</small>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/report.js" defer></script>
+<script src="/app.js" defer></script>
+</body>
+</html>

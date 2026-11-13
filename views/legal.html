@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{@title}} — Titip Salam</title>
+<meta name="description" content="{{@description}}">
+<meta name="theme-color" content="#F5EFEB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232F4156'/%3E%3Cpath d='M12 18.5s-5.5-3.4-5.5-7.6A3.1 3.1 0 0112 9a3.1 3.1 0 015.5 1.9c0 4.2-5.5 7.6-5.5 7.6z' fill='%23C8D9E6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-8-4.9-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6.1-8 11-8 11z"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="brand-mark"><svg class="h" aria-hidden="true"><use href="#heart"/></svg></span>
+      <span class="brand-name">Titip Salam</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="{{@other_href}}">{{@other_label}}</a>
+      <a class="nav-cta" href="/#tulis">Tulis Confess</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc-hero">
+  <div class="wrap doc-head">
+    <span class="eyebrow"><svg class="h" aria-hidden="true"><use href="#heart"/></svg>{{@eyebrow}}</span>
+    <h1 class="display">{{@title}}</h1>
+    <p class="doc-meta">Terakhir diperbarui {{@updated}}</p>
+  </div>
+</main>
+
+<article class="doc">
+  <div class="wrap doc-body">
+    <p class="doc-lead">{{!lead}}</p>
+
+{{!sections}}
+  </div>
+</article>
+
+<footer class="closing doc-foot">
+  <div class="wrap">
+    <div class="foot">
+      <span class="fb">Titip Salam</span>
+      <nav aria-label="Footer">
+        <a href="/disclaimer">Disclaimer</a>
+        <a href="/privasi">Kebijakan Privasi</a>
+        <a href="/hapus">Hapus Pesan</a>
+        <a href="/disclaimer#kontak">Kontak</a>
+      </nav>
+      <small>© 2026 Titip Salam. Anonim, gratis, dan dibuat dengan sepenuh hati.</small>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
