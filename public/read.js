@@ -65,6 +65,11 @@
       flag.appendChild(use);
       report.append(flag, document.createTextNode('Laporkan pesan ini'));
 
+      const cta = el('div', 'letter-cta', '');
+      const ctaBtn = el('a', 'btn btn-primary', 'Tulis confess-mu sendiri');
+      ctaBtn.href = '/';
+      cta.append(el('p', '', 'Ada yang ingin kamu sampaikan juga? Titip salam anonim, gratis, tanpa daftar.'), ctaBtn);
+
       setContent(
         el('p', 'for', `Untuk: ${d.to}`),
         el('p', 'body', d.message), // textContent: aman dari XSS
@@ -72,6 +77,7 @@
         el('p', 'when', `Ditulis ${when}`),
         ...(d.expiresAt ? [el('p', 'when', `Link berlaku sampai ${new Date(d.expiresAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}`)] : []),
         el('p', 'hint', 'Surat ini bersifat pribadi. Hanya kamu yang memegang link ini.'),
+        cta,
         report
       );
       document.title = `Untuk ${d.to} — Titip Salam`;
